@@ -9,12 +9,6 @@ module.exports = {
 
    entry: "./src/index.ts",
 
-   devtool: "inline-source-map",
-
-   devServer: {
-       contentBase: './dist'
-   },
-
    output: {
        path: path.resolve(__dirname, "dist"),
        filename: "bundle.js",
@@ -67,7 +61,9 @@ module.exports = {
    plugins: [
        new CleanWebpackPlugin(),
        new HtmlWebpackPlugin({
-           title:'TS测试'
+           title:'贪吃蛇',
+           template:'./src/index.html'
        }),
-   ]
+   ],
+   mode: "development"
 }

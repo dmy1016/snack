@@ -1,5 +1,13 @@
-body{
-    background-color: rebeccapurple;
-    display: flex;
-    color: rebeccapurple;
+@bg-color: #b7d4a8; // 将该颜色储存为变量方便以后使用
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#main {
+    width: 360px;
+    height: 420px;
+    background-color: @bg-color; // 使用颜色变量直接使用属性名即可
 }
