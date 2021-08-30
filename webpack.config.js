@@ -13,7 +13,8 @@ module.exports = {
        path: path.resolve(__dirname, "dist"),
        filename: "bundle.js",
        environment: {
-           arrowFunction: false // 关闭webpack的箭头函数，可选
+           arrowFunction: false, // 关闭webpack的箭头函数，可选
+           const: false
        }
    },
 
