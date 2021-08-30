@@ -27,3 +27,5 @@ class Snack{
         // 给蛇容器的结尾标签之前添加div 也就是添加蛇的身体
     }
 }
+
+export default Snack
