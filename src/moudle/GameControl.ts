@@ -53,10 +53,11 @@ class GameControl{
             this.isLive = false // 当超出范围则停止游戏将isLive设置为false
         }
         this.isLive && setTimeout(this.run.bind(this),300-(this.scorePanel.level - 1)*30) // 初始化时，使蛇动起来默认向右，1级时 默认就是300 (1-1)*30=0 2级时，(2-1)*30=30 速度变为27
-        // 只有蛇活着才能再次移动
+        // 只有蛇活着才能再次移动 isLive作用
     }
     checkEat(){ // 检查是否吃到食物
         if(this.Snack.X === this.food.X && this.Snack.Y === this.food.Y){ // 如果蛇吃到食物（蛇坐标与食物坐标重合）
+            // console.log('进来了')
             this.food.change() // 改变食物的位置
             this.scorePanel.addScore() // 加一分
             this.Snack.addBody() // 增加身体
